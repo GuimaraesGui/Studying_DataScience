@@ -21,19 +21,26 @@ ws = workbook['nomeAba']
 3. Acessando uma célula
 ```Python
 ws['colunaELinha']
+# Forma alternativa
+celula = planilha.cell(row=1, column=1)
 ```
 
-4. Exibindo o valor da célula
+4. Inserindo valor na célula
+```Python
+ws['A1'].value = 'Novo valor'
+```
+
+5. Exibindo o valor da célula
 ```Python
 ws['colunaELinha'].value
 ```
 
-5. Salvando alterações
+6. Salvando alterações
 ```Python
 workbook.save('endereçoArquivo')
 ```
 
-6. Criando uma planilha
+7. Criando uma planilha
 ```Python
 from openpyxl import Workbook
 # Criando a planilha
